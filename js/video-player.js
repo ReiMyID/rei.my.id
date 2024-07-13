@@ -1,0 +1,1 @@
+document.addEventListener("DOMContentLoaded",e=>{let t=document.getElementById("ytvid"),d=0,l=()=>{t.muted=!1,t.play().then(()=>{console.log("Video unmuted successfully")}).catch(e=>{console.error("Unmuting failed:",e),d<5&&(d++,setTimeout(l,1e3))})};t.play().then(()=>{setTimeout(l,3e3)}).catch(e=>{console.error("Autoplay failed:",e)})});
